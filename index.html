@@ -1,5 +1,26 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Game I made</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leopard@^1/dist/index.min.css"
+    />
   </head>
+  <body>
+    <button id="greenFlag">Start Game</button>
+    <div id="project"></div>
+
+    <script type="module">
+      import project from "./index.js";
+
+      project.attach("#project");
+
+      document.querySelector("#greenFlag").addEventListener("click", () => {
+        project.startGame();
+      });
+
+      // Autoplay
+      project.startGame();
+    </script>
+  </body>
 </html>
